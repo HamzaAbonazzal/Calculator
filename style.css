@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  transition: background 0.3s;
+}
+
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  border: none;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 24px;
+  text-align: right;
+  color: #333;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #d0d0d0;
+}
+
+.operator {
+  background: #ff9500;
+  color: #fff;
+}
+
+.operator:hover {
+  background: #e08500;
+}
+
+.equals {
+  background: #2196f3;
+  color: #fff;
+}
+
+.equals:hover {
+  background: #1e87db;
+}
+
+.clear {
+  background: #f44336;
+  color: #fff;
+}
+
+.clear:hover {
+  background: #d32f2f;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+body.dark .theme-toggle::before {
+  content: "☀️";
+}
+
+.theme-toggle::before {
+  content: "🌙";
+}
+
+body.dark {
+  background: #1c2526;
+}
+
+.dark .calculator {
+  background: #2c3e50;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark .display {
+  background: #34495e;
+  color: #ecf0f1;
+}
+
+.dark button {
+  background: #7f8c8d;
+  color: #ecf0f1;
+}
+
+.dark button:hover {
+  background: #95a5a6;
+}
+
+.dark .operator {
+  background: #e67e22;
+}
+
+.dark .operator:hover {
+  background: #d35400;
+}
+
+.dark .equals {
+  background: #3498db;
+}
+
+.dark .equals:hover {
+  background: #2980b9;
+}
+
+.dark .clear {
+  background: #c0392b;
+}
+
+.dark .clear:hover {
+  background: #a93226;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    padding: 10px;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .display {
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+footer {
+  position: absolute;
+  top: 91.4%;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  font-size: 20px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.dark footer {
+  background-color: #111;
+  color: #eee;
+}
+
+footer p strong {
+  text-shadow: 0 0 1em #ffd700;
+}
+
+footer a img {
+  width: 70px;
+  height: 50px;
+  transition: 0.3s filter;
+}
+footer a img:hover {
+  filter: drop-shadow(0 0 1em #ffd700)
+}
